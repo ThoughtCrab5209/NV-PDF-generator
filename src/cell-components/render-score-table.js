@@ -142,17 +142,17 @@ export default function RenderScoreTable(props) {
                         {/* New line spacer */}
                         <Text> </Text>
 
-                        {/* Society */}
+                        {/* Icon */}
                         <Text style={[styles.bodyText, styles.event, {color: item.colour, marginLeft: 25, marginTop: 10}]}>
                             <Image src={`./assets/images/${item.icon}.jpg`} style={{ width: 32, height: 32 }} />
                         </Text>
 
-                        {/* Place */}
+                        {/* Place & Society */}
                         <Text style={[styles.bodyText, styles.event, {color: item.colour, marginLeft: 58, marginTop: -22}]}>
                             &nbsp;&nbsp;&nbsp; {podiumList[placesList[index]] + ': ' + item.society}
                         </Text>
 
-                        {/* Icon */}
+                        {/* Score */}
                         <Text style={[styles.bodyText, styles.event, {color: item.colour, marginRight: 58, textAlign: 'right', transform: 'translateY(-25px)'}]}>
                             {item.score}
                         </Text>

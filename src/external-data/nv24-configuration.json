@@ -3,62 +3,14 @@
   "details": {
     "information": {
       "society-information-list": [
-        [
-          "Airsoft x TEC",
-          "AIRTEC",
-          "405508",
-          "Airsoft-x-TEC",
-          0
-        ],
-        [
-          "Anime",
-          "ANI",
-          "f59307",
-          "Anime",
-          0
-        ],
-        [
-          "Challengers",
-          "CHLNGR",
-          "a0a0a0",
-          "Challengers",
-          0
-        ],
-        [
-          "CRITS",
-          "CRI",
-          "de1f41",
-          "CRITS",
-          0
-        ],
-        [
-          "Doctor Who",
-          "WHO",
-          "01a0e2",
-          "Doctor-Who",
-          0
-        ],
-        [
-          "Film x Creative Writing",
-          "FLMCRW",
-          "56fd06",
-          "Film-x-Creative-Writing",
-          1
-        ],
-        [
-          "Gaming",
-          "GAM",
-          "f70089",
-          "Gaming",
-          0
-        ],
-        [
-          "Sci-Fan",
-          "SCF",
-          "0265cd",
-          "Scifi-Fantasy",
-          0
-        ]
+        ["Airsoft x TEC","AIRTEC","405508","Airsoft-x-TEC",0],
+        ["Anime","ANI","f59307","Anime",0],
+        ["Challengers","CHLNGR","a0a0a0","Challengers",0],
+        ["CRITS","CRI","de1f41","CRITS",0],
+        ["Doctor Who","WHO","01a0e2","Doctor-Who",0],
+        ["Film x Creative Writing","FLMCRW","56fd06","Film-x-Creative-Writing",1],
+        ["Gaming","GAM","f70089","Gaming",0],
+        ["Sci-Fan","SCF","0265cd","Scifi-Fantasy",0]
       ],
       "completed-events": 17,
       "total-events": 17,
