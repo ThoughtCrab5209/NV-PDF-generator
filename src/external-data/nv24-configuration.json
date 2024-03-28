@@ -29,10 +29,7 @@
         "page-2": {
           "title": "Leaderboard",
           "type": "leaderboard",
-          "data": {
-            "societies": null,
-            "places": null
-          }
+          "data": null
         },
         "page-3": {
           "title": "The Scores So Far",

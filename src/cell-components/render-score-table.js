@@ -6,7 +6,6 @@ import Configuration from "../external-data/nv24-configuration.json";
 
 
 // --- Variables ---
-
 // Styling
 const styles = StyleSheet.create({
     bodyText: {
@@ -46,7 +45,6 @@ const socInfoList = Configuration.details.information["society-information-list"
 
 
 // --- Functions ---
-
 // Using the provided integer (see the config file), return the corresponding score to use
 function translatePlaceToScore(place) {
     switch (place) {

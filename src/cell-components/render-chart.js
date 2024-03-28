@@ -8,13 +8,11 @@ import Configuration from "../external-data/nv24-configuration.json";
 
 
 // --- Variables ---
-
 // Get the information of each society
 const socInfoList = Configuration.details.information["society-information-list"];
 
 
 // --- Functions ---
-
 // Using the provided integer (see the config file), return the corresponding score to use
 function translatePlaceToScore(place) {
     switch (place) {
@@ -69,14 +67,14 @@ function formatData(data, finalIndex) {
 
     // Round 0: nothing happens so set everything to 0 - creates a nice origin point
     graphData.push({
-        event: '',
+        'event': '',
         'Airsoft x TEC': 0,
-        Anime: 0,
-        Challengers: 0,
-        CRITS: 0,
+        'Anime': 0,
+        'Challengers': 0,
+        'CRITS': 0,
         'Doctor Who': 0,
         'Film x Creative Writing': 0,
-        Gaming: 0,
+        'Gaming': 0,
         'Sci-Fan': 0
     })
 
@@ -114,7 +112,7 @@ function formatData(data, finalIndex) {
 
     }
 
-    // when all rounds have been played, add one final score thing which deducts points
+    // when all rounds have been played, add one final score thing which adds the bonus points
     if (Configuration.details.information["total-events"] === Configuration.details.information["completed-events"]){
         for (const society of socInfoList){
             graphData[Configuration.details.information["completed-events"]][society[0]] += society[4]
@@ -155,7 +153,7 @@ export default function RenderChart(props) {
     const newData = fetchData(modifier);
 
     // if all events are completed, add in an extra 1 fake event to handle the big quiz scores (2* the normal)
-    modifier = modifier === Configuration.details.information["total-events"] ? modifier + 1 : modifier
+    // modifier = modifier === Configuration.details.information["total-events"] ? modifier + 1 : modifier
 
     // chart settings
      return (

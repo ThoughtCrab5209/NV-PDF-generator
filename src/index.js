@@ -12,7 +12,6 @@ import {createRoot} from "react-dom/client";
 
 
 // --- Variables ---
-
 // Styling
 const styles = StyleSheet.create({
     cell: {
@@ -155,7 +154,6 @@ let formattedData = [];
 
 
 // --- Functions ---
-
 // Using the given abbreviation, return the corresponding array
 function getSocietyDataArray(abbrev){
     for (const array of socInfoList){
@@ -234,7 +232,6 @@ function formatData(){
 
 
 // --- The PDF ---
-
 // Make document
 const MyDocument = () => {
 

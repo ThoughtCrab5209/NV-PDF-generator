@@ -6,7 +6,6 @@ import Configuration from "../external-data/nv24-configuration.json";
 
 
 // --- Variables ---
-
 // Styling
 const styles = StyleSheet.create({
     bodyText: {
@@ -40,7 +39,6 @@ const socInfoList = Configuration.details.information["society-information-list"
 
 
 // --- Functions ---
-
 // Taking in the list of society names and their scores, sort in descending score order
 function sortList(unsortedList){
     const sortedList = [];
@@ -107,14 +105,14 @@ function formatData(data, finalIndex) {
 
     // Round 0: nothing happens so set everything to 0 - creates a nice origin point
     leaderboardData.push({
-        event: '',
+        'event': '',
         'Airsoft x TEC': 0,
-        Anime: 0,
-        Challengers: 0,
-        CRITS: 0,
+        'Anime': 0,
+        'Challengers': 0,
+        'CRITS': 0,
         'Doctor Who': 0,
         'Film x Creative Writing': 0,
-        Gaming: 0,
+        'Gaming': 0,
         'Sci-Fan': 0
     })
 
