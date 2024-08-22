@@ -2,7 +2,9 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from "@react-pdf/renderer";
 
-import Configuration from "../external-data/nv24-configuration.json";
+import Configuration from "../configuration.json";
+
+import {translatePlaceToScore} from "../functions/translatePlaceToScore";
 
 
 // --- Variables ---
@@ -49,30 +51,6 @@ function sortList(unsortedList){
     sortedList.sort((a,b) => b.split('/')[0] - a.split('/')[0]);
 
     return sortedList
-}
-
-// Using the provided integer (see the config file), return the corresponding score to use
-function translatePlaceToScore(place) {
-    switch (place) {
-        case '1':
-            return 16
-        case '2':
-            return 14
-        case '3':
-            return 12
-        case '4':
-            return 10
-        case '5':
-            return 8
-        case '6':
-            return 6
-        case '7':
-            return 4
-        case '8':
-            return 2
-        default:
-            return 0
-    }
 }
 
 // Using the provided abbreviation, return the corresponding full society name

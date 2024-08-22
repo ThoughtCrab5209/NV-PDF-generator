@@ -1,0 +1,175 @@
+{
+  "name": "Nerd Varsity 2025",
+  "details": {
+    "information": {
+      "society-information-list": [
+        ["Airsoft x TEC","AIRTEC","405508","Airsoft-x-TEC",0],
+        ["Anime","ANI","f59307","Anime",0],
+        ["Challengers","CHLNGR","a0a0a0","Challengers",0],
+        ["CRITS","CRI","de1f41","CRITS",0],
+        ["Doctor Who","WHO","01a0e2","Doctor-Who",0],
+        ["Film x Creative Writing","FLMCRW","56fd06","Film-x-Creative-Writing",0],
+        ["Gaming","GAM","f70089","Gaming",0],
+        ["Sci-Fan","SCF","0265cd","Scifi-Fantasy",0]
+      ],
+      "completed-events": 0,
+      "total-events": 17,
+      "pages-to-show": [2, 3]
+    },
+    "pages": [
+      {
+        "page-1": {
+          "title": "Nerd Varsity 2025 Champions",
+          "type": "image",
+          "data": "#"
+        },
+        "page-2": {
+          "title": "Leaderboard",
+          "type": "leaderboard",
+          "data": null
+        },
+        "page-3": {
+          "title": "The Scores So Far",
+          "type": "chart",
+          "data": null
+        },
+        "page-4": {
+          "title": "Round 1: Movie Fights",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-5": {
+          "title": "Round 2: Worldbuilding",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-6": {
+          "title": "Round 3: Potion Making",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-7": {
+          "title": "Round 4: CRITS Gauntlet",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-8": {
+          "title": "Round 5: Miniature Painting",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-9": {
+          "title": "Round 6: Boardgame Betting",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-10": {
+          "title": "Round 7: RISK: Warlords",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-11": {
+          "title": "Round 8: MarioKart 8 Deluxe Tournament",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-12": {
+          "title": "Round 9: Super Smash Bros. Ultimate Tournament",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-13": {
+          "title": "Round 10: Capture The Flag",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-14": {
+          "title": "Round 11: Lightsaber Tournament",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-15": {
+          "title": "Round 12: Battle Robot Tournament",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-16": {
+          "title": "Round 13: Murder Mystery",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-17": {
+          "title": "Round 14 [1]: Cosplay Competition",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-18": {
+          "title": "Round 14 [2]: Short Film Competition",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-19": {
+          "title": "Round 14 [3]: Anime Dubbing",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        },
+        "page-20": {
+          "title": "Round 14 [4]: The Big Finale Quiz",
+          "type": "table",
+          "data": {
+            "societies": "#/#/#/#/#/#/#/#",
+            "places": "0/0/0/0/0/0/0/0"
+          }
+        }
+      }
+    ]
+  }
+}

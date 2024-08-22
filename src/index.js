@@ -2,7 +2,7 @@
 import React from 'react';
 import { Document, Image, Page, PDFViewer, StyleSheet, Text, View } from '@react-pdf/renderer';
 
-import Configuration from "./external-data/nv24-configuration.json";
+import Configuration from "./configuration.json";
 
 import RenderChart from "./cell-components/render-chart";
 import RenderScoreTable from "./cell-components/render-score-table";

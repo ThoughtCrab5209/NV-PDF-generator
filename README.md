@@ -39,7 +39,8 @@ represents the title of the document. it will be in the format:
 replacing 2024 with the current year of the event
 
 "details" - should contain "information" and "pages"
-"information" - should contain "society-information-list", "completed-events" and "pages-to-show"
+
+"information" - should contain "society-information-list", "completed-events", and "pages-to-show"
 
 ### "society-information-list" 
 is an array of arrays where each array is in the format:
@@ -117,7 +118,7 @@ no points
 Each page follows this strict format, change the format of one and you must change all of them. If the page does not 
 pass in any configuration data (like the one shown above), switch the value to 'null': 
     
-    "title": null
+    "data": null
 
 Page-1 is used to show the winner of NV, in the "data" section, add in the abbreviation
 of the society only, the code will do the rest for you
