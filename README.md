@@ -5,10 +5,6 @@ for Nerd Varsity!
 This README will guide you through how to setup the program so that
 creating a statistics document is super easy :)
 
-For ease of use in the future, I would recommend creating a new JSON file
-for each year - 'nv24-configuration.json' should be the name of it with nv24
-replaced by nv + the final 2 digits of the year (nv25)
-
 ---
 ## Prerequisites
 For this project, I would recommend having nodejs & npm installed. npm is a package manager that is easy to use and relatively 
