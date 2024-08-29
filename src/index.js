@@ -142,8 +142,8 @@ const styles = StyleSheet.create({
 });
 
 // Self-explanatory; startPage is the first page to show, endPage is the last page to show
-const startPage = Configuration.details.information["pages-to-show"][0];
-const endPage = Configuration.details.information["pages-to-show"][1];
+const startPage = Configuration.details.information["start-page"];
+const endPage = Configuration.details.information["end-page"];
 
 // Get the information of each society
 const socInfoList = Configuration.details.information["society-information-list"];
@@ -161,7 +161,7 @@ function getSocietyDataArray(abbrev){
             return array
         }
     }
-    return ['N/A', 'N/A', 'ffffff', 'Unspecified']
+    return ['N/A', 'N/A', '#ffffff', 'Unspecified']
 }
 
 // Return cell framework based on type
@@ -190,7 +190,7 @@ function determineCell(item) {
                     <View style={[styles.imageContainer]}>
                         <Image src={`./assets/images/${data[3]}.jpg`} />
                     </View>
-                    <View style={[styles.footerText, {color: `#${data[2]}`}]}>
+                    <View style={[styles.footerText, {color: `${data[2]}`}]}>
                         <Text>{data[0].toUpperCase()}</Text>
                     </View>
                 </View>

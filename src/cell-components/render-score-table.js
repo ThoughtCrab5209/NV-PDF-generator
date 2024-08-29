@@ -56,7 +56,7 @@ function mergeLists(listOne, listTwo){
                 newList.push({
                     society: society[0],
                     score: translatePlaceToScore(listTwo[i]),
-                    colour: `#${society[2]}`,
+                    colour: `${society[2]}`,
                     icon: society[3]
                 })
             }

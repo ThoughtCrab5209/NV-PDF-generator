@@ -36,13 +36,13 @@ replacing 2024 with the current year of the event
 
 "details" - should contain "information" and "pages"
 
-"information" - should contain "society-information-list", "completed-events", and "pages-to-show"
+"information" - should contain "society-information-list", "completed-events", "total-events", "start-page", and "end-page"
 
 ### "society-information-list" 
 is an array of arrays where each array is in the format:
 
     [Name, Abbreviation, Colour, Filename, Bonus]
-    ["CRITS", "CRI","de1f41", "CRITS", 1]
+    ["CRITS", "CRI", "#de1f41", "CRITS", 1]
 where:
 > Name: is used to identify the society; it should be the full name of the competing society although exceptions do
 > occur (see Sci-Fan)
@@ -50,8 +50,7 @@ where:
 > Abbreviation: is the shorthand for the society name; it should be a multiple of 3 and be clear which society it is 
 > referencing (CHLNGR = Challengers)
 
-> Colour: is the hex-code of the society's primary colour; it should not be preceded by a '#' as the program already 
-> handles this
+> Colour: is the hex-code of the society's primary colour
 
 > Filename: is the name of the icon jpg for the society; each icon must be in the same location (public/assets/images) 
 > and societies with spaces should have '-' in place of them (Doctor Who = Doctor-Who)
@@ -62,13 +61,17 @@ where:
 ### "completed-events"
 is an integer, and should be equivalent to how many events have been completed and have the scores released
 
+### "total-events"
+is an integer, and should be equivalent to the total events that are planned. When all the vents have been run 
+(completed-events = total-events), the bonus points will be added to the scores
 
-### "pages-to-show"
-is an array of two integers, where the first integer dictates the first page to render and the second integer dictates 
-the last page to render. For example (please take a look at nv24-configuration.json):
+### "start-page"
+is an integer value which corresponds to the first page show in the pdf
+4 = "page-4"
 
-    "pages-to-show": [4, 10]
-will start at "page-4" and end at "page-10" in "pages"
+### "end-page"
+is an integer value which corresponds to the last page show in the pdf
+11 = "page-11"
 
 ---
 Next, we'll look at configuring the pages; the "pages" array. This is a little more complicated, but is modular 
@@ -148,9 +151,6 @@ When a society is added/removed/changed, go to:
 
 ---
 ## Running the program
-Once your configuration is ready, depending on the IDE you're using, it may require a different setup than the 
-one I've been using (JetBrains WebStorm).
-
 In the package.json file, there are 4 scripts that can be run. The one you'll need is 'start', this will build the
 program in a separate read-only folder (you can edit it but don't), and will then run it locally on port 3000. It should
 automatically open in your preferred browser, but in the case that it doesn't, go to 'localhost:3000'.

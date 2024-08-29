@@ -144,7 +144,7 @@ function formatData(data, finalIndex) {
         formattedLeaderboardData.push({
             score: leaderboardData[society[0]],
             society: society[0],
-            colour: `#${society[2]}`,
+            colour: `${society[2]}`,
             icon: society[3]
         })
     }

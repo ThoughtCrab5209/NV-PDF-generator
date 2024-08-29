@@ -130,9 +130,6 @@ export default function RenderChart(props) {
 
     const newData = fetchData(modifier);
 
-    // if all events are completed, add in an extra 1 fake event to handle the big quiz scores (2* the normal)
-    // modifier = modifier === Configuration.details.information["total-events"] ? modifier + 1 : modifier
-
     // chart settings
      return (
          <ReactPDFChart>
@@ -147,22 +144,22 @@ export default function RenderChart(props) {
 
                  <CartesianGrid vertical={false} strokeDasharray="3" stroke={"#ffffff"} />
 
-                 <Line dataKey="Airsoft x TEC" fill={"#405508"} isAnimationActive={false} type="monotone" stroke={"#405508"}
-                       dot={{ stroke: "#405508", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Anime" fill={"#f59307"} isAnimationActive={false} type="monotone" stroke={"#f59307"}
-                       dot={{ stroke: "#f59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Challengers" fill={"#a0a0a0"} isAnimationActive={false} type="monotone" stroke={"#a0a0a0"}
-                       dot={{ stroke: "#a0a0a0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="CRITS" fill={"#de1f41"} isAnimationActive={false} type="monotone" stroke={"#de1f41"}
-                       dot={{ stroke: "#de1f41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Doctor Who" fill={"#01a0e2"} isAnimationActive={false} type="monotone" stroke={"#01a0e2"}
-                       dot={{ stroke: "#01a0e2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Film x Creative Writing" fill={"#56fd06"} isAnimationActive={false} type="monotone" stroke={"#56fd06"}
-                       dot={{ stroke: "#56fd06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Gaming" fill={"#f70089"} isAnimationActive={false} type="monotone" stroke={"#f70089"}
-                       dot={{ stroke: "#f70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Sci-Fan" fill={"#0265cd"} isAnimationActive={false} type="monotone" stroke={"#0265cd"}
-                       dot={{ stroke: "#0265cd", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Airsoft x TEC" 
+                    fill={"#405508"} isAnimationActive={false} type="monotone" stroke={"#405508"} dot={{ stroke: "#405508", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Anime" 
+                    fill={"#f59307"} isAnimationActive={false} type="monotone" stroke={"#f59307"} dot={{ stroke: "#f59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Challengers"
+                    fill={"#a0a0a0"} isAnimationActive={false} type="monotone" stroke={"#a0a0a0"} dot={{ stroke: "#a0a0a0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="CRITS"
+                    fill={"#de1f41"} isAnimationActive={false} type="monotone" stroke={"#de1f41"} dot={{ stroke: "#de1f41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Doctor Who"
+                    fill={"#01a0e2"} isAnimationActive={false} type="monotone" stroke={"#01a0e2"} dot={{ stroke: "#01a0e2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Film x Creative Writing"
+                    fill={"#56fd06"} isAnimationActive={false} type="monotone" stroke={"#56fd06"} dot={{ stroke: "#56fd06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Gaming"
+                    fill={"#f70089"} isAnimationActive={false} type="monotone" stroke={"#f70089"} dot={{ stroke: "#f70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Sci-Fan"
+                    fill={"#0265cd"} isAnimationActive={false} type="monotone" stroke={"#0265cd"} dot={{ stroke: "#0265cd", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
              </LineChart>
          </ReactPDFChart>
      )
