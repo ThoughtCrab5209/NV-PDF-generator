@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 });
 
 // Get the information of each society
-const socInfoList = Configuration.details.information["society-information-list"];
+const socInfoList = Configuration.details["society-information-list"];
 
 
 // --- Functions ---

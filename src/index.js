@@ -68,6 +68,12 @@ const styles = StyleSheet.create({
         margin: 30,
         width: 350
     },
+    invalidCellType: {
+        color: '#fff',
+        fontSize: 30,
+        marginTop: '29%',
+        textAlign: 'center'
+    },
     maxXCell: {
         width: '100%',
     },
@@ -142,11 +148,11 @@ const styles = StyleSheet.create({
 });
 
 // Self-explanatory; startPage is the first page to show, endPage is the last page to show
-const startPage = Configuration.details.information["start-page"];
-const endPage = Configuration.details.information["end-page"];
+const startPage = Configuration.details["start-page"];
+const endPage = Configuration.details["end-page"];
 
 // Get the information of each society
-const socInfoList = Configuration.details.information["society-information-list"];
+const socInfoList = Configuration.details["society-information-list"];
 
 // Data arrays
 let baseData = [];
@@ -175,13 +181,13 @@ function determineCell(item) {
                         <Text>{item.title}</Text>
                     </View>
                     <View style={[styles.chartContainer]}>
-                        <RenderChart data={item.data} title={item.title} modifier={Configuration.details.information["completed-events"]} />
+                        <RenderChart data={item.data} title={item.title} modifier={Configuration.details["completed-events"]} />
                     </View>
                 </View>
             )
+
         case "image":
             const data = getSocietyDataArray(item.data)
-            console.log(data);
             return (
                 <View style={[styles.cell, styles.maxXCell, styles.maxYCell, styles.doubleData]}>
                     <View style={[styles.headerText]}>
@@ -195,6 +201,7 @@ function determineCell(item) {
                     </View>
                 </View>
             )
+
         case "leaderboard":
             return (
                 <View style={[styles.cell, styles.maxXCell, styles.maxYCell, styles.doubleData]}>
@@ -203,11 +210,23 @@ function determineCell(item) {
                     </View>
                 </View>
             )
+
         case "table":
             return (
                 <View style={[styles.cell, styles.maxXCell, styles.maxYCell, styles.doubleData]}>
                     <View style={[styles.tableText]}>
                         <RenderScoreTable data={item.data} title={item.title} />
+                    </View>
+                </View>
+            )
+
+        default:
+            return (
+                <View style={[styles.cell, styles.maxXCell, styles.maxYCell, styles.doubleData]}>
+                    <View>
+                        <Text style={[styles.invalidCellType]}>
+                            Page type is invalid
+                        </Text>
                     </View>
                 </View>
             )
@@ -219,7 +238,6 @@ function determineCell(item) {
 function formatData(){
 
     for (let i = startPage; i <= (endPage); i++) {
-        // console.log("element:", baseData[0][`page-${i}`])
         formattedData.push({
             title: baseData[0][`page-${i}`].title,
             type: baseData[0][`page-${i}`].type,
@@ -227,7 +245,6 @@ function formatData(){
         })
     }
 
-    console.log("Formatted data: ", formattedData);
 }
 
 
@@ -235,8 +252,7 @@ function formatData(){
 // Make document
 const MyDocument = () => {
 
-    baseData = Configuration.details.pages;
-    console.log("Base data: ", baseData);
+    baseData = Configuration.pages;
 
     formatData();
 

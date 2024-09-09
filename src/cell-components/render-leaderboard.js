@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 });
 
 // Get the information of each society
-const socInfoList = Configuration.details.information["society-information-list"];
+const socInfoList = Configuration.details["society-information-list"];
 
 
 // --- Functions ---
@@ -129,9 +129,9 @@ function formatData(data, finalIndex) {
     }
 
     // when all rounds have been played, add one final score thing which deducts points
-    if (Configuration.details.information["total-events"] === Configuration.details.information["completed-events"]){
+    if (Configuration.details["total-events"] === Configuration.details["completed-events"]){
         for (const society of socInfoList){
-            leaderboardData[Configuration.details.information["completed-events"]][society[0]] += society[4]
+            leaderboardData[Configuration.details["completed-events"]][society[0]] += society[4]
         }
     }
 
@@ -154,8 +154,7 @@ function formatData(data, finalIndex) {
 
 // Format the base data into a usable context, then return the net scores for each society
 function getTotalScores(emptyList){
-    //console.log("// Function: fetchData //")
-    const finalEventIndex = Configuration.details.information["completed-events"]
+    const finalEventIndex = Configuration.details["completed-events"]
 
     // Should be equivalent to the 'page-n' of the first event
     const pageIncrementModifier = 4;

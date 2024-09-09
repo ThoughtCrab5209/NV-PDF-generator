@@ -11,7 +11,7 @@ import {translatePlaceToScore} from "../functions/translatePlaceToScore";
 
 // --- Variables ---
 // Get the information of each society
-const socInfoList = Configuration.details.information["society-information-list"];
+const socInfoList = Configuration.details["society-information-list"];
 
 
 // --- Functions ---
@@ -91,9 +91,9 @@ function formatData(data, finalIndex) {
     }
 
     // when all rounds have been played, add one final score thing which adds the bonus points
-    if (Configuration.details.information["total-events"] === Configuration.details.information["completed-events"]){
+    if (Configuration.details["total-events"] >= Configuration.details["completed-events"]){
         for (const society of socInfoList){
-            graphData[Configuration.details.information["completed-events"]][society[0]] += society[4]
+            graphData[Configuration.details["completed-events"]][society[0]] += society[4]
         }
     }
 
@@ -102,7 +102,6 @@ function formatData(data, finalIndex) {
 
 // Using the provided integer (total completed events), get all the data up to and including this page
 function fetchData(finalEventIndex) {
-    //console.log("// Function: fetchData //")
     const scoresSoFarData = []
 
     // Should be equivalent to the 'page-n' of the first event

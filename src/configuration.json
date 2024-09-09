@@ -1,48 +1,48 @@
 {
   "name": "Nerd Varsity 2025",
+
   "details": {
-    "information": {
-      "society-information-list": [
-        ["Airsoft x TEC","AIRTEC","#405508","Airsoft-x-TEC",0],
-        ["Anime","ANI","#f59307","Anime",0],
-        ["Challengers","CHLNGR","#a0a0a0","Challengers",0],
-        ["CRITS","CRI","#de1f41","CRITS",0],
-        ["Doctor Who","WHO","#01a0e2","Doctor-Who",0],
-        ["Film x Creative Writing","FLMCRW","#56fd06","Film-x-Creative-Writing",0],
-        ["Gaming","GAM","#f70089","Gaming",0],
-        ["Sci-Fan","SCF","#0265cd","Scifi-Fantasy",0]
-      ],
-      "completed-events": 0,
-      "total-events": 1,
-      "start-page": 2,
-      "end-page": 3
-    },
-    "pages": [
-      {
-        "page-1": {
-          "title": "Nerd Varsity 2025 Champions",
-          "type": "image",
-          "data": null
-        },
-        "page-2": {
-          "title": "Leaderboard",
-          "type": "leaderboard",
-          "data": null
-        },
-        "page-3": {
-          "title": "The Scores So Far",
-          "type": "chart",
-          "data": null
-        },
-        "page-4": {
-          "title": "Round 1: Movie Fights",
-          "type": "table",
-          "data": {
-            "societies": "#/#/#/#/#/#/#/#",
-            "places": "0/0/0/0/0/0/0/0"
-          }
+    "society-information-list": [
+      ["Airsoft x TEC","AIRTEC","#405508","Airsoft-x-TEC",0],
+      ["Anime","ANI","#f59307","Anime",0],
+      ["Challengers","CHLNGR","#a0a0a0","Challengers",0],
+      ["CRITS","CRI","#de1f41","CRITS",0],
+      ["Doctor Who","WHO","#01a0e2","Doctor-Who",0],
+      ["Film x Creative Writing","FLMCRW","#56fd06","Film-x-Creative-Writing",0],
+      ["Gaming","GAM","#f70089","Gaming",0],
+      ["Sci-Fan","SCF","#0265cd","Scifi-Fantasy",0]
+    ],
+    "completed-events": 0,
+    "total-events": 1,
+    "start-page": 1,
+    "end-page": 4
+  },
+
+  "pages": [
+    {
+      "page-1": {
+        "title": "Nerd Varsity 2025 Champions",
+        "type": "image",
+        "data": null
+      },
+      "page-2": {
+        "title": "Leaderboard",
+        "type": "leaderboard",
+        "data": null
+      },
+      "page-3": {
+        "title": "The Scores So Far",
+        "type": "chart",
+        "data": null
+      },
+      "page-4": {
+        "title": "Round 1: Movie Fights",
+        "type": "table",
+        "data": {
+          "societies": "#/#/#/#/#/#/#/#",
+          "places": "0/0/0/0/0/0/0/0"
         }
       }
-    ]
-  }
+    }
+  ]
 }
