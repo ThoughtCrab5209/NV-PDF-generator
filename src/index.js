@@ -136,10 +136,6 @@ const styles = StyleSheet.create({
     tableWrapper: {
         marginTop: 20,
     },
-    view: {
-        alignContent: 'left',
-        flexGrow: 1,
-    },
     wrapper: {
         alignSelf: 'center',
         height: '95vh',
