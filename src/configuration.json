@@ -12,9 +12,9 @@
       ["Gaming","GAM","#f70089","Gaming",0],
       ["Sci-Fan","SCF","#0265cd","Scifi-Fantasy",0]
     ],
-    "completed-events": 0,
+    "completed-events": 1,
     "total-events": 1,
-    "start-page": 4,
+    "start-page": 1,
     "end-page": 4
   },
 
@@ -35,11 +35,11 @@
       "data": null
     },
     "page-4": {
-      "title": "Round 1: Movie Fights",
+      "title": "Round 1: Avery is at it again",
       "type": "table",
       "data": {
-        "societies": "GAM/ANI/CRI/SCF/WHO/FLMCRW/CHLNGR/AIRTEC",
-        "places": "1/2/3/4/5/6/7/9"
+        "societies": "AIRTEC/ANI/CHLNGR/CRI/FLMCRW/GAM/SCF/WHO",
+        "places": "1/2/3/4/5/6/7/8"
       }
     }
   }

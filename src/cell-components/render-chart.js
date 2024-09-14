@@ -44,8 +44,8 @@ function formatData(data, finalIndex) {
             placesList = data[i].data.places.split("/");
 
             if (societiesList[0] === '#' && placesList[0] === '0'){
-                societiesList = "AIRTEC/ANI/CHLNGR/CRI/FLMCRW/GAM/SCF/WHO".split("/")
-                placesList = "0/0/0/0/0/0/0/0".split("/")
+                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAM", "SCF", "WHO"]
+                placesList = ["0", "0", "0", "0", "0", "0", "0", "0"]
             }
 
         } catch (e) {
@@ -86,9 +86,9 @@ function fetchData(finalEventIndex) {
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
         scoresSoFarData.push({
-            title: Configuration.details.pages[`page-${i}`].title,
-            type: Configuration.details.pages[`page-${i}`].type,
-            data: Configuration.details.pages[`page-${i}`].data,
+            title: Configuration.pages[`page-${i}`].title,
+            type: Configuration.pages[`page-${i}`].type,
+            data: Configuration.pages[`page-${i}`].data,
         })
     }
 

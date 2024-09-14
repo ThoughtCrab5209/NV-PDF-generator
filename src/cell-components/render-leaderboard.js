@@ -139,9 +139,9 @@ function getTotalScores(){
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
         societyList.push({
-            title: Configuration.details.pages[`page-${i}`].title,
-            type: Configuration.details.pages[`page-${i}`].type,
-            data: Configuration.details.pages[`page-${i}`].data,
+            title: Configuration.pages[`page-${i}`].title,
+            type: Configuration.pages[`page-${i}`].type,
+            data: Configuration.pages[`page-${i}`].data,
         })
     }
 
