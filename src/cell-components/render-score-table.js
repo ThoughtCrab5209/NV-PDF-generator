@@ -112,6 +112,10 @@ export default function RenderScoreTable(props) {
             </View>
 
             {mergedList.map((item, index) => {
+
+                let podiumPlace = podiumList[placesList[index]] + ': ' + item.society;
+                podiumPlace.includes('undefined') ? podiumPlace = 'N/A: ' + item.society : null;
+
                 return (
                     <>
                         {/* New line spacer */}
@@ -124,7 +128,7 @@ export default function RenderScoreTable(props) {
 
                         {/* Place & Society */}
                         <Text style={[styles.bodyText, styles.event, {color: item.colour, marginLeft: 58, marginTop: -22}]}>
-                            &nbsp;&nbsp;&nbsp; {podiumList[placesList[index]] + ': ' + item.society}
+                            &nbsp;&nbsp;&nbsp; {podiumPlace}
                         </Text>
 
                         {/* Score */}

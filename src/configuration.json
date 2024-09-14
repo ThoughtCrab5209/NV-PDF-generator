@@ -14,7 +14,7 @@
     ],
     "completed-events": 0,
     "total-events": 1,
-    "start-page": 2,
+    "start-page": 4,
     "end-page": 4
   },
 
@@ -38,8 +38,8 @@
       "title": "Round 1: Movie Fights",
       "type": "table",
       "data": {
-        "societies": "#/#/#/#/#/#/#/#",
-        "places": "0/0/0/0/0/0/0/0"
+        "societies": "GAM/ANI/CRI/SCF/WHO/FLMCRW/CHLNGR/AIRTEC",
+        "places": "1/2/3/4/5/6/7/9"
       }
     }
   }

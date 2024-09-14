@@ -152,7 +152,7 @@ function getTotalScores(){
 // --- The table ---
 export default function RenderLeaderboard(props) {
 
-    let leaderboardList = getTotalScores();
+    const leaderboardList = getTotalScores();
 
         return (
             <View>
