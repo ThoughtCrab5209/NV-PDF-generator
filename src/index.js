@@ -235,9 +235,9 @@ function formatData(){
 
     for (let i = startPage; i <= (endPage); i++) {
         formattedData.push({
-            title: baseData[0][`page-${i}`].title,
-            type: baseData[0][`page-${i}`].type,
-            data: baseData[0][`page-${i}`].data,
+            title: baseData[`page-${i}`].title,
+            type: baseData[`page-${i}`].type,
+            data: baseData[`page-${i}`].data,
         })
     }
 

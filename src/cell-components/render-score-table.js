@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from "@react-pdf/renderer";
 
 import Configuration from "../configuration.json";
-import {translatePlaceToScore} from "../functions/translatePlaceToScore";
+import { translatePlaceToScore } from "../functions/translatePlaceToScore";
 
 
 // --- Variables ---

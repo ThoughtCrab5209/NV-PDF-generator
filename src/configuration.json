@@ -14,35 +14,33 @@
     ],
     "completed-events": 0,
     "total-events": 1,
-    "start-page": 1,
+    "start-page": 2,
     "end-page": 4
   },
 
-  "pages": [
-    {
-      "page-1": {
-        "title": "Nerd Varsity 2025 Champions",
-        "type": "image",
-        "data": null
-      },
-      "page-2": {
-        "title": "Leaderboard",
-        "type": "leaderboard",
-        "data": null
-      },
-      "page-3": {
-        "title": "The Scores So Far",
-        "type": "chart",
-        "data": null
-      },
-      "page-4": {
-        "title": "Round 1: Movie Fights",
-        "type": "table",
-        "data": {
-          "societies": "#/#/#/#/#/#/#/#",
-          "places": "0/0/0/0/0/0/0/0"
-        }
+  "pages": {
+    "page-1": {
+      "title": "Nerd Varsity 2025 Champions",
+      "type": "image",
+      "data": null
+    },
+    "page-2": {
+      "title": "Leaderboard",
+      "type": "leaderboard",
+      "data": null
+    },
+    "page-3": {
+      "title": "The Scores So Far",
+      "type": "chart",
+      "data": null
+    },
+    "page-4": {
+      "title": "Round 1: Movie Fights",
+      "type": "table",
+      "data": {
+        "societies": "#/#/#/#/#/#/#/#",
+        "places": "0/0/0/0/0/0/0/0"
       }
     }
-  ]
+  }
 }

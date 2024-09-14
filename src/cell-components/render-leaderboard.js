@@ -4,7 +4,8 @@ import { Image, StyleSheet, Text, View } from "@react-pdf/renderer";
 
 import Configuration from "../configuration.json";
 
-import {translatePlaceToScore} from "../functions/translatePlaceToScore";
+import { translatePlaceToScore } from "../functions/translatePlaceToScore";
+import { teamAbbreviationToName } from '../functions/teamAbbreviationToName';
 
 
 // --- Variables ---
@@ -51,30 +52,6 @@ function sortList(unsortedList){
     sortedList.sort((a,b) => b.split('/')[0] - a.split('/')[0]);
 
     return sortedList
-}
-
-// Using the provided abbreviation, return the corresponding full society name
-function teamAbbreviationToName(abbrev) {
-    switch (abbrev) {
-        case 'AIRTEC':
-            return 'Airsoft x TEC'
-        case 'ANI':
-            return 'Anime'
-        case 'CHLNGR':
-            return 'Challengers'
-        case 'CRI':
-            return 'CRITS'
-        case 'WHO':
-            return 'Doctor Who'
-        case 'FLMCRW':
-            return 'Film x Creative Writing'
-        case 'GAM':
-            return 'Gaming'
-        case 'SCF':
-            return 'Sci-Fan'
-        default:
-            return ''
-    }
 }
 
 // After changing the data into the format required for the line chart, get the final element
