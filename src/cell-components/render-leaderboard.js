@@ -130,28 +130,29 @@ function formatData(data, finalIndex) {
 }
 
 // Format the base data into a usable context, then return the net scores for each society
-function getTotalScores(emptyList){
+function getTotalScores(){
+    const societyList = [];
     const finalEventIndex = Configuration.details["completed-events"]
 
     // Should be equivalent to the 'page-n' of the first event
     const pageIncrementModifier = 4;
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
-        emptyList.push({
-            title: Configuration.details.pages[0][`page-${i}`].title,
-            type: Configuration.details.pages[0][`page-${i}`].type,
-            data: Configuration.details.pages[0][`page-${i}`].data,
+        societyList.push({
+            title: Configuration.details.pages[`page-${i}`].title,
+            type: Configuration.details.pages[`page-${i}`].type,
+            data: Configuration.details.pages[`page-${i}`].data,
         })
     }
 
-    return formatData(emptyList, finalEventIndex)
+    return formatData(societyList, finalEventIndex)
 }
 
 
 // --- The table ---
 export default function RenderLeaderboard(props) {
 
-    let leaderboardList = getTotalScores([]);
+    let leaderboardList = getTotalScores();
 
         return (
             <View>

@@ -86,9 +86,9 @@ function fetchData(finalEventIndex) {
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
         scoresSoFarData.push({
-            title: Configuration.details.pages[0][`page-${i}`].title,
-            type: Configuration.details.pages[0][`page-${i}`].type,
-            data: Configuration.details.pages[0][`page-${i}`].data,
+            title: Configuration.details.pages[`page-${i}`].title,
+            type: Configuration.details.pages[`page-${i}`].type,
+            data: Configuration.details.pages[`page-${i}`].data,
         })
     }
 
