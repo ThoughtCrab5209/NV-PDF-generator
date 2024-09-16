@@ -3,18 +3,18 @@
 
   "details": {
     "society-information-list": [
-      ["Airsoft x TEC","AIRTEC","#405508","Airsoft-x-TEC",0],
-      ["Anime","ANI","#f59307","Anime",0],
-      ["Challengers","CHLNGR","#a0a0a0","Challengers",0],
-      ["CRITS","CRI","#de1f41","CRITS",0],
-      ["Doctor Who","WHO","#01a0e2","Doctor-Who",0],
-      ["Film x Creative Writing","FLMCRW","#56fd06","Film-x-Creative-Writing",0],
-      ["Gaming","GAM","#f70089","Gaming",0],
-      ["Sci-Fan","SCF","#0265cd","Scifi-Fantasy",0]
+      ["Airsoft x TEC",           "AIRTEC", "#405508", "Airsoft-x-TEC",           0],
+      ["Anime",                   "ANI",    "#F59307", "Anime",                   0],
+      ["Challengers",             "CHLNGR", "#A0A0A0", "Challengers",             0],
+      ["CRITS",                   "CRI",    "#DE1F41", "CRITS",                   0],
+      ["Doctor Who",              "WHO",    "#01A0E2", "Doctor-Who",              0],
+      ["Film x Creative Writing", "FLMCRW", "#56FD06", "Film-x-Creative-Writing", 0],
+      ["Gaming x Esports",        "GAMESP", "#F70089", "Gaming-x-Esports",        0],
+      ["Sci-Fan",                 "SCF",    "#0265CD", "Scifi-Fantasy",           0]
     ],
     "completed-events": 1,
     "total-events": 1,
-    "start-page": 1,
+    "start-page": 2,
     "end-page": 4
   },
 
@@ -38,7 +38,7 @@
       "title": "Round 1: Avery is at it again",
       "type": "table",
       "data": {
-        "societies": "AIRTEC/ANI/CHLNGR/CRI/FLMCRW/GAM/SCF/WHO",
+        "societies": "AIRTEC/ANI/CHLNGR/CRI/FLMCRW/GAMESP/SCF/WHO",
         "places": "1/2/3/4/5/6/7/8"
       }
     }

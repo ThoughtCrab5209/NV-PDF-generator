@@ -40,17 +40,17 @@ replacing 2024 with the current year of the event
 ### "society-information-list" 
 is an array of arrays where each array is in the format:
 
-    [Name, Abbreviation, Colour, Filename, Bonus]
+    [Team name, Abbreviation, Colour, Filename, Bonus]
     ["CRITS", "CRI", "#de1f41", "CRITS", 1]
 
 where:
-> Name: is used to identify the society; it should be the full name of the competing society although exceptions do occur (see Sci-Fan)
+> Team name: is used to identify the society; it should be the full name of the competing society although exceptions do occur (see Sci-Fan)
 
 > Abbreviation: is the shorthand for the society name; it should be a multiple of 3 and be clear which society it is referencing (CHLNGR = Challengers)
 
 > Colour: is the full hex-code of the society's primary colour
 
-> Filename: is the name of the icon jpg for the society; each icon must be in the same location (public/assets/images) and societies with spaces should have '-' in place of them (Doctor Who = Doctor-Who)
+> Filename: is the name of the icon jpg for the society; each icon must be in the same location (public/assets/images) and societies with spaces should have '-' in place of them (Doctor Who = Doctor-Who). Do not change already present dashes
 
 > Bonus: an integer that represents the total number of points that a society will gain when bonus points can be won. E.G., best team name. If a society is to lose points (deductions), change this number to be negative instead 
 

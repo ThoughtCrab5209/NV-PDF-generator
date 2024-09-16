@@ -29,7 +29,7 @@ function formatData(data, finalIndex) {
         'CRITS': 0,
         'Doctor Who': 0,
         'Film x Creative Writing': 0,
-        'Gaming': 0,
+        'Gaming x Esports': 0,
         'Sci-Fan': 0
     })
 
@@ -44,7 +44,7 @@ function formatData(data, finalIndex) {
             placesList = data[i].data.places.split("/");
 
             if (societiesList[0] === '#' && placesList[0] === '0'){
-                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAM", "SCF", "WHO"]
+                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAMESP", "SCF", "WHO"]
                 placesList = ["0", "0", "0", "0", "0", "0", "0", "0"]
             }
 
@@ -123,19 +123,19 @@ export default function RenderChart(props) {
                  <Line dataKey="Airsoft x TEC" 
                     fill={"#405508"} isAnimationActive={false} type="monotone" stroke={"#405508"} dot={{ stroke: "#405508", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="Anime" 
-                    fill={"#f59307"} isAnimationActive={false} type="monotone" stroke={"#f59307"} dot={{ stroke: "#f59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#F59307"} isAnimationActive={false} type="monotone" stroke={"#F59307"} dot={{ stroke: "#F59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="Challengers"
-                    fill={"#a0a0a0"} isAnimationActive={false} type="monotone" stroke={"#a0a0a0"} dot={{ stroke: "#a0a0a0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#A0A0A0"} isAnimationActive={false} type="monotone" stroke={"#A0A0A0"} dot={{ stroke: "#A0A0A0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="CRITS"
-                    fill={"#de1f41"} isAnimationActive={false} type="monotone" stroke={"#de1f41"} dot={{ stroke: "#de1f41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#DE1F41"} isAnimationActive={false} type="monotone" stroke={"#DE1F41"} dot={{ stroke: "#DE1F41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="Doctor Who"
-                    fill={"#01a0e2"} isAnimationActive={false} type="monotone" stroke={"#01a0e2"} dot={{ stroke: "#01a0e2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#01A0E2"} isAnimationActive={false} type="monotone" stroke={"#01A0E2"} dot={{ stroke: "#01A0E2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="Film x Creative Writing"
-                    fill={"#56fd06"} isAnimationActive={false} type="monotone" stroke={"#56fd06"} dot={{ stroke: "#56fd06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Gaming"
-                    fill={"#f70089"} isAnimationActive={false} type="monotone" stroke={"#f70089"} dot={{ stroke: "#f70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#56FD06"} isAnimationActive={false} type="monotone" stroke={"#56FD06"} dot={{ stroke: "#56FD06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                 <Line dataKey="Gaming x Esports"
+                    fill={"#F70089"} isAnimationActive={false} type="monotone" stroke={"#F70089"} dot={{ stroke: "#F70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
                  <Line dataKey="Sci-Fan"
-                    fill={"#0265cd"} isAnimationActive={false} type="monotone" stroke={"#0265cd"} dot={{ stroke: "#0265cd", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                    fill={"#0265CD"} isAnimationActive={false} type="monotone" stroke={"#0265CD"} dot={{ stroke: "#0265CD", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
              </LineChart>
          </ReactPDFChart>
      )

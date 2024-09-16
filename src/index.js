@@ -301,3 +301,15 @@ const MOUNT_ELEMENT = document.createElement('div');
 document.body.appendChild(MOUNT_ELEMENT);
 const root = createRoot(MOUNT_ELEMENT);
 root.render(<ViewWrapper />);
+
+
+
+/*
+
+New societies
+==================
+["GRIMsoc"                ,"GRM"   ,"#000000","GRIMsoc"                ,0],
+["Live Music"             ,"LMS"   ,"#000000","Live-Music"             ,0],
+["Medieval Re-enactment"  ,"MDR"   ,"#000000","Medieval-Re-enactment"  ,0],
+
+*/
