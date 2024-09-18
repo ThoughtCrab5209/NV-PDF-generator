@@ -147,9 +147,6 @@ const endPage = Configuration.details["end-page"];
 
 const socInfoList = Configuration.details["society-information-list"];
 
-let baseData = [];
-let formattedData = [];
-
 
 // --- Functions ---
 function getSocietyDataArray(abbrev){
@@ -158,7 +155,8 @@ function getSocietyDataArray(abbrev){
             return array
         }
     }
-    return ['N/A', 'N/A', '#ffffff', 'Unspecified']
+
+    return ['N/A', 'N/A', '#FFFFFF', 'Unspecified']
 }
 
 function determineCell(item) {
@@ -224,8 +222,8 @@ function determineCell(item) {
 
 }
 
-// Using the base data from config, format it into a usable context
-function formatData(){
+function formatData(baseData){
+    let formattedData = [];
 
     for (let i = startPage; i <= (endPage); i++) {
         formattedData.push({
@@ -235,19 +233,18 @@ function formatData(){
         })
     }
 
+    return formattedData;
 }
 
 
 // --- The PDF ---
 const MyDocument = () => {
 
-    baseData = Configuration.pages;
-
-    formatData();
+    const documentData = formatData(Configuration.pages);
 
     return (
         <Document>
-            {formattedData.map((item, index) => {
+            {documentData.map((item, index) => {
                 return (
                     <Page orientation='landscape' size='A4' style={[styles.page]}>
                         <View style={[styles.tableWrapper]}>
