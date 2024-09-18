@@ -72,7 +72,6 @@ function formatData(data, finalIndex) {
     return graphData
 }
 
-// Using the provided integer (total completed events), get all the data up to and including this page
 function fetchData(finalEventIndex) {
     const scoresSoFarData = []
 

@@ -29,9 +29,13 @@ const styles = StyleSheet.create({
     event: {
         border: 0,
     },
-    ranking: {
+    rankingIcon: {
         border: 0,
         marginTop: 5,
+        textAlign: "center"
+    },
+    rankingText: {
+        border: 0,
         textAlign: "center"
     },
 });
@@ -40,7 +44,6 @@ const socInfoList = Configuration.details["society-information-list"];
 
 
 // --- Functions ---
-// Taking in the list of society names and their scores, sort in descending score order
 function sortList(unsortedList){
     const sortedList = [];
 
@@ -52,7 +55,6 @@ function sortList(unsortedList){
     return sortedList
 }
 
-// After changing the data into the format required for the line chart, get the final element
 function formatData(data, finalIndex) {
     let leaderboardData = [];
 
@@ -102,7 +104,6 @@ function formatData(data, finalIndex) {
 
     }
 
-    // when all rounds have been played, add one final score thing which deducts points
     if (Configuration.details["total-events"] === Configuration.details["completed-events"]){
         for (const society of socInfoList){
             leaderboardData[Configuration.details["completed-events"]][society[0]] += society[4]
@@ -125,8 +126,7 @@ function formatData(data, finalIndex) {
     return sortList(formattedLeaderboardData)
 }
 
-// Format the base data into a usable context, then return the net scores for each society
-function getTotalScores(){
+function fetchData(){
     const societyList = [];
     const finalEventIndex = Configuration.details["completed-events"]
 
@@ -147,7 +147,7 @@ function getTotalScores(){
 // --- The table ---
 export default function RenderLeaderboard(props) {
 
-    const leaderboardList = getTotalScores();
+    const leaderboardList = fetchData();
 
         return (
             <View>
@@ -162,36 +162,36 @@ export default function RenderLeaderboard(props) {
                 {/* item format: 0=score, 1=society, 2=colour 3=icon */}
                 {leaderboardList.map((item) => {
                     return (
-                        <>
-                            {/* New line spacer */}
-                            <Text> </Text>
-
+                        <div>
+                            
                             {/* Icon */}
-                            <Text style={[styles.bodyText, styles.ranking, {color: item.split('/')[2], transform: 'translateX(-315px)'}]}>
+                            <Text style={[styles.bodyText, styles.rankingIcon, {
+                                color: item.split('/')[2],
+                                transform: 'translate(-315px, 10px)'
+                            }]}>
                                 <Image src={`./assets/images/${item.split('/')[3]}.jpg`}
-                                       style={{width: 32, height: 32}}/>
+                                    style={{width: 32, height: 32}}
+                                />
                             </Text>
 
                             {/* Society + score */}
-                            <Text style={[styles.bodyText, styles.ranking, {
+                            <Text style={[styles.bodyText, styles.rankingText, {
                                 color: item.split('/')[2],
-                                transform: 'translateY(-19px)'
+                                marginBottom: 30
                             }]}>
-                                {item.split('/')[1]}  {item.split('/')[0]}
+                                {item.split('/')[1]} - {item.split('/')[0]}
                             </Text>
 
                             {/* Icon */}
-                            <Text style={[styles.bodyText, styles.ranking, {
+                            <Text style={[styles.bodyText, styles.rankingIcon, {
                                 color: item.split('/')[2],
-                                transform: 'translate(305px, -35px)'
+                                transform: 'translate(305px, -40px)'
                             }]}>
                                 <Image src={`./assets/images/${item.split('/')[3]}.jpg`}
-                                       style={{width: 32, height: 32}}/>
+                                    style={{width: 32, height: 32}}/>
                             </Text>
 
-                            {/* New line spacer */}
-                            <Text> </Text>
-                        </>
+                        </div>
                     )
                 })}
             </View>
