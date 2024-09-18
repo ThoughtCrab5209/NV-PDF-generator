@@ -130,7 +130,7 @@ function fetchData(){
     const societyList = [];
     const finalEventIndex = Configuration.details["completed-events"]
 
-    const pageIncrementModifier = 4;
+    const pageIncrementModifier = Configuration.details['first-event-page'];
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
         societyList.push({

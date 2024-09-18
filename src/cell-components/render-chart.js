@@ -31,7 +31,7 @@ function formatData(data, finalIndex) {
         'Sci-Fan': 0
     })
 
-    for (let i = 0; i < finalIndex  + 2; i++) {
+    for (let i = 0; i < finalIndex + 2; i++) {
         let societiesList
         let placesList
 
@@ -75,7 +75,7 @@ function formatData(data, finalIndex) {
 function fetchData(finalEventIndex) {
     const scoresSoFarData = []
 
-    const pageIncrementModifier = 4;
+    const pageIncrementModifier = Configuration.details['first-event-page'];
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
         scoresSoFarData.push({

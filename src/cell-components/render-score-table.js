@@ -46,8 +46,8 @@ const socInfoList = Configuration.details["society-information-list"];
 // --- Functions ---
 function mergeLists(societies, places){
     let newList = []
+    
     for (let i = 0; i < societies.length; i++) {
-
         for (const society of socInfoList) {
             if (society[1] === societies[i]){
                 newList.push({
@@ -57,9 +57,7 @@ function mergeLists(societies, places){
                     icon: society[3]
                 })
             }
-
         }
-
     }
 
     return newList

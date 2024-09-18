@@ -15,7 +15,8 @@
     "completed-events": 1,
     "total-events": 1,
     "start-page": 2,
-    "end-page": 4
+    "end-page": 4,
+    "first-event-page": 4
   },
 
   "pages": {
