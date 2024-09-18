@@ -11,7 +11,6 @@ import { teamAbbreviationToName } from '../functions/teamAbbreviationToName';
 
 
 // --- Variables ---
-// Get the information of each society
 const socInfoList = Configuration.details["society-information-list"];
 
 
@@ -20,7 +19,6 @@ const socInfoList = Configuration.details["society-information-list"];
 function formatData(data, finalIndex) {
     const graphData = [];
 
-    // Round 0: nothing happens so set everything to 0 - creates a nice origin point
     graphData.push({
         'event': '',
         'Airsoft x TEC': 0,
@@ -29,22 +27,20 @@ function formatData(data, finalIndex) {
         'CRITS': 0,
         'Doctor Who': 0,
         'Film x Creative Writing': 0,
-        'Gaming x Esports': 0,
+        'Gaming': 0,
         'Sci-Fan': 0
     })
 
-    // starts at 0, ends at finalIndex
     for (let i = 0; i < finalIndex  + 2; i++) {
         let societiesList
         let placesList
 
-        // sometimes it reads more data than present, so when there's no more data, break out of the loop
         try {
             societiesList = data[i].data.societies.split("/");
             placesList = data[i].data.places.split("/");
 
             if (societiesList[0] === '#' && placesList[0] === '0'){
-                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAMESP", "SCF", "WHO"]
+                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAM", "SCF", "WHO"]
                 placesList = ["0", "0", "0", "0", "0", "0", "0", "0"]
             }
 
@@ -67,7 +63,6 @@ function formatData(data, finalIndex) {
 
     }
 
-    // when all rounds have been played, add one final score thing which adds the bonus points
     if (Configuration.details["total-events"] >= Configuration.details["completed-events"]){
         for (const society of socInfoList){
             graphData[Configuration.details["completed-events"]][society[0]] += society[4]
@@ -81,7 +76,6 @@ function formatData(data, finalIndex) {
 function fetchData(finalEventIndex) {
     const scoresSoFarData = []
 
-    // Should be equivalent to the 'page-n' of the first event
     const pageIncrementModifier = 4;
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {
@@ -106,37 +100,42 @@ export default function RenderChart(props) {
 
     const newData = fetchData(modifier);
 
-    // chart settings
-     return (
-         <ReactPDFChart>
-             <LineChart data={newData} width={width} height={height}
-                        margin={{ top: 20, bottom: 20, right: 100, left: 5 }} >
-                 <XAxis dataKey="event" axisLine={true} tickLine={true} stroke={"#ffffff"} />
+    return (
+        <ReactPDFChart>
+            <LineChart data={newData} width={width} height={height} margin={{ top: 20, bottom: 20, right: 100, left: 5 }}>
+                <XAxis dataKey="event" axisLine={true} tickLine={true} stroke={"#ffffff"} />
+                
+                <YAxis axisLine={true} tickLine={true} domain={[0, 16*modifier]} stroke={"#ffffff"}
+                    ticks={[0, 2*modifier, 4*modifier, 6*modifier, 8*modifier, 10*modifier, 12*modifier, 14*modifier, 16*modifier]} />
 
-                 <YAxis axisLine={true} tickLine={true} domain={[0, 16*modifier]} stroke={"#ffffff"}
-                        ticks={[0, 2*modifier, 4*modifier, 6*modifier, 8*modifier, 10*modifier, 12*modifier, 14*modifier, 16*modifier]} />
+                <Legend />
 
-                 <Legend />
+                <CartesianGrid vertical={false} strokeDasharray="3" stroke={"#ffffff"} />
 
-                 <CartesianGrid vertical={false} strokeDasharray="3" stroke={"#ffffff"} />
-
-                 <Line dataKey="Airsoft x TEC" 
-                    fill={"#405508"} isAnimationActive={false} type="monotone" stroke={"#405508"} dot={{ stroke: "#405508", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Anime" 
-                    fill={"#F59307"} isAnimationActive={false} type="monotone" stroke={"#F59307"} dot={{ stroke: "#F59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Challengers"
-                    fill={"#A0A0A0"} isAnimationActive={false} type="monotone" stroke={"#A0A0A0"} dot={{ stroke: "#A0A0A0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="CRITS"
-                    fill={"#DE1F41"} isAnimationActive={false} type="monotone" stroke={"#DE1F41"} dot={{ stroke: "#DE1F41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Doctor Who"
-                    fill={"#01A0E2"} isAnimationActive={false} type="monotone" stroke={"#01A0E2"} dot={{ stroke: "#01A0E2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Film x Creative Writing"
-                    fill={"#56FD06"} isAnimationActive={false} type="monotone" stroke={"#56FD06"} dot={{ stroke: "#56FD06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Gaming x Esports"
-                    fill={"#F70089"} isAnimationActive={false} type="monotone" stroke={"#F70089"} dot={{ stroke: "#F70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-                 <Line dataKey="Sci-Fan"
-                    fill={"#0265CD"} isAnimationActive={false} type="monotone" stroke={"#0265CD"} dot={{ stroke: "#0265CD", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
-             </LineChart>
-         </ReactPDFChart>
+                <Line dataKey="Airsoft x TEC" 
+                fill={"#405508"} isAnimationActive={false} type="monotone" stroke={"#405508"} dot={{ stroke: "#405508", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Anime" 
+                fill={"#F59307"} isAnimationActive={false} type="monotone" stroke={"#F59307"} dot={{ stroke: "#F59307", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Challengers"
+                fill={"#A0A0A0"} isAnimationActive={false} type="monotone" stroke={"#A0A0A0"} dot={{ stroke: "#A0A0A0", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="CRITS"
+                fill={"#DE1F41"} isAnimationActive={false} type="monotone" stroke={"#DE1F41"} dot={{ stroke: "#DE1F41", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Doctor Who"
+                fill={"#01A0E2"} isAnimationActive={false} type="monotone" stroke={"#01A0E2"} dot={{ stroke: "#01A0E2", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Film x Creative Writing"
+                fill={"#56FD06"} isAnimationActive={false} type="monotone" stroke={"#56FD06"} dot={{ stroke: "#56FD06", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Gaming"
+                fill={"#F70089"} isAnimationActive={false} type="monotone" stroke={"#F70089"} dot={{ stroke: "#F70089", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+                
+                <Line dataKey="Sci-Fan"
+                fill={"#0265CD"} isAnimationActive={false} type="monotone" stroke={"#0265CD"} dot={{ stroke: "#0265CD", strokeWidth: 2 }} label={{ fill: '#ffffff', position: 'top' }} />
+            </LineChart>
+        </ReactPDFChart>
      )
 }

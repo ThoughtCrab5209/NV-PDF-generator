@@ -8,11 +8,10 @@ import RenderChart from "./cell-components/render-chart";
 import RenderScoreTable from "./cell-components/render-score-table";
 import RenderLeaderboard from "./cell-components/render-leaderboard";
 
-import {createRoot} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 
 
 // --- Variables ---
-// Styling
 const styles = StyleSheet.create({
     cell: {
         alignSelf: 'stretch',
@@ -143,20 +142,16 @@ const styles = StyleSheet.create({
     },
 });
 
-// Self-explanatory; startPage is the first page to show, endPage is the last page to show
 const startPage = Configuration.details["start-page"];
 const endPage = Configuration.details["end-page"];
 
-// Get the information of each society
 const socInfoList = Configuration.details["society-information-list"];
 
-// Data arrays
 let baseData = [];
 let formattedData = [];
 
 
 // --- Functions ---
-// Using the given abbreviation, return the corresponding array
 function getSocietyDataArray(abbrev){
     for (const array of socInfoList){
         if (array[1] === abbrev){
@@ -166,7 +161,6 @@ function getSocietyDataArray(abbrev){
     return ['N/A', 'N/A', '#ffffff', 'Unspecified']
 }
 
-// Return cell framework based on type
 function determineCell(item) {
 
     switch (item.type) {
@@ -245,7 +239,6 @@ function formatData(){
 
 
 // --- The PDF ---
-// Make document
 const MyDocument = () => {
 
     baseData = Configuration.pages;

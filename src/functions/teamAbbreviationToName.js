@@ -13,8 +13,8 @@ export const teamAbbreviationToName = (abbrev) => {
             return 'Doctor Who'
         case 'FLMCRW':
             return 'Film x Creative Writing'
-        case 'GAMESP':
-            return 'Gaming x Esports'
+        case 'GAM':
+            return 'Gaming'
         case 'SCF':
             return 'Sci-Fan'
         default:

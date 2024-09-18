@@ -9,7 +9,6 @@ import { teamAbbreviationToName } from '../functions/teamAbbreviationToName';
 
 
 // --- Variables ---
-// Styling
 const styles = StyleSheet.create({
     bodyText: {
         fontSize: 30,
@@ -37,7 +36,6 @@ const styles = StyleSheet.create({
     },
 });
 
-// Get the information of each society
 const socInfoList = Configuration.details["society-information-list"];
 
 
@@ -58,7 +56,6 @@ function sortList(unsortedList){
 function formatData(data, finalIndex) {
     let leaderboardData = [];
 
-    // Round 0: nothing happens so set everything to 0 - creates a nice origin point
     leaderboardData.push({
         'event': '',
         'Airsoft x TEC': 0,
@@ -67,7 +64,7 @@ function formatData(data, finalIndex) {
         'CRITS': 0,
         'Doctor Who': 0,
         'Film x Creative Writing': 0,
-        'Gaming x Esports': 0,
+        'Gaming': 0,
         'Sci-Fan': 0
     })
 
@@ -82,8 +79,8 @@ function formatData(data, finalIndex) {
             placesList = data[i].data.places.split("/");
 
             if (societiesList[0] === '#' && placesList[0] === '0'){
-                societiesList = "AIRTEC/ANI/CHLNGR/CRI/FLMCRW/GAMESP/SCF/WHO".split("/")
-                placesList = "0/0/0/0/0/0/0/0".split("/")
+                societiesList = ["AIRTEC", "ANI", "CHLNGR", "CRI", "FLMCRW", "GAM", "SCF", "WHO"]
+                placesList = ["0", "0", "0", "0", "0", "0", "0", "0"]
             }
 
         } catch (e) {
@@ -112,7 +109,6 @@ function formatData(data, finalIndex) {
         }
     }
 
-    // Set data to be the final data point
     leaderboardData = leaderboardData[finalIndex];
 
     const formattedLeaderboardData = [];
@@ -134,7 +130,6 @@ function getTotalScores(){
     const societyList = [];
     const finalEventIndex = Configuration.details["completed-events"]
 
-    // Should be equivalent to the 'page-n' of the first event
     const pageIncrementModifier = 4;
 
     for (let i = pageIncrementModifier; i <= finalEventIndex + pageIncrementModifier - 1; i++) {

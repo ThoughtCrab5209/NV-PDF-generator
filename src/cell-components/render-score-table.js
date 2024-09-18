@@ -7,7 +7,6 @@ import { translatePlaceToScore } from "../functions/translatePlaceToScore";
 
 
 // --- Variables ---
-// Styling
 const styles = StyleSheet.create({
     bodyText: {
         fontSize: 30,
@@ -41,21 +40,19 @@ const styles = StyleSheet.create({
     },
 });
 
-// Get the information of each society
 const socInfoList = Configuration.details["society-information-list"];
 
 
 // --- Functions ---
-// Merge the societies and places list into one
-function mergeLists(listOne, listTwo){
+function mergeLists(societies, places){
     let newList = []
-    for (let i = 0; i < listOne.length; i++) {
+    for (let i = 0; i < societies.length; i++) {
 
         for (const society of socInfoList) {
-            if (society[1] === listOne[i]){
+            if (society[1] === societies[i]){
                 newList.push({
                     society: society[0],
-                    score: translatePlaceToScore(listTwo[i]),
+                    score: translatePlaceToScore(places[i]),
                     colour: `${society[2]}`,
                     icon: society[3]
                 })
