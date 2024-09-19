@@ -169,7 +169,7 @@ export default function RenderLeaderboard(props) {
                                 color: item.split('/')[2],
                                 transform: 'translate(-315px, 10px)'
                             }]}>
-                                <Image src={`./assets/images/${item.split('/')[3]}.jpg`}
+                                <Image src={`./assets/images/${item.split('/')[3]}`}
                                     style={{width: 32, height: 32}}
                                 />
                             </Text>
@@ -187,7 +187,7 @@ export default function RenderLeaderboard(props) {
                                 color: item.split('/')[2],
                                 transform: 'translate(305px, -40px)'
                             }]}>
-                                <Image src={`./assets/images/${item.split('/')[3]}.jpg`}
+                                <Image src={`./assets/images/${item.split('/')[3]}`}
                                     style={{width: 32, height: 32}}/>
                             </Text>
 

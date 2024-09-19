@@ -92,8 +92,8 @@ function fetchData(finalEventIndex) {
 // --- The chart ---
 export default function RenderChart(props) {
 
-    const width = 4*260;
-    const height = 2*300;
+    const width = 1040;
+    const height = 600;
 
     let modifier = props.modifier;
 

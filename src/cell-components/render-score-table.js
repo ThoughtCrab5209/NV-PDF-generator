@@ -78,8 +78,6 @@ export default function RenderScoreTable(props) {
     if (mergedList.length === 0){
         return (
             <View>
-
-                {/* Cell Header */}
                 <View style={[styles.headerText, {paddingBottom: 5}]}>
                     <Text>
                         {props.title}
@@ -91,7 +89,6 @@ export default function RenderScoreTable(props) {
                         Scores unavailable
                     </Text>
                 </View>
-
             </View>
         )
     }
@@ -99,7 +96,6 @@ export default function RenderScoreTable(props) {
     return (
         <View>
 
-            {/* Cell Header */}
             <View style={[styles.headerText]}>
                 <Text>
                     {props.title}
@@ -118,7 +114,7 @@ export default function RenderScoreTable(props) {
 
                         {/* Icon */}
                         <Text style={[styles.bodyText, styles.event, {color: item.colour, marginLeft: 25, marginTop: 10}]}>
-                            <Image src={`./assets/images/${item.icon}.jpg`} style={{ width: 32, height: 32 }} />
+                            <Image src={`./assets/images/${item.icon}`} style={{ width: 32, height: 32 }} />
                         </Text>
 
                         {/* Place & Society */}

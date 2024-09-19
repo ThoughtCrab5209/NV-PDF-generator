@@ -182,7 +182,7 @@ function determineCell(item) {
                         <Text>{item.title}</Text>
                     </View>
                     <View style={[styles.imageContainer]}>
-                        <Image src={`./assets/images/${data[3]}.jpg`} />
+                        <Image src={`./assets/images/${data[3]}`} />
                     </View>
                     <View style={[styles.footerText, {color: `${data[2]}`}]}>
                         <Text>{data[0].toUpperCase()}</Text>

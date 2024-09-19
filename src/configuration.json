@@ -3,14 +3,14 @@
 
   "details": {
     "society-information-list": [
-      ["Airsoft x TEC",           "AIRTEC", "#405508", "Airsoft-x-TEC",           0],
-      ["Anime",                   "ANI",    "#F59307", "Anime",                   0],
-      ["Challengers",             "CHLNGR", "#A0A0A0", "Challengers",             0],
-      ["CRITS",                   "CRI",    "#DE1F41", "CRITS",                   0],
-      ["Doctor Who",              "WHO",    "#01A0E2", "Doctor-Who",              0],
-      ["Film x Creative Writing", "FLMCRW", "#56FD06", "Film-x-Creative-Writing", 0],
-      ["Gaming",                  "GAM",    "#F70089", "Gaming",                  0],
-      ["Sci-Fan",                 "SCF",    "#0265CD", "Scifi-Fantasy",           0]
+      ["Airsoft x TEC",           "AIRTEC", "#405508", "Airsoft-x-TEC.jpg",           0],
+      ["Anime",                   "ANI",    "#F59307", "Anime.jpg",                   0],
+      ["Challengers",             "CHLNGR", "#A0A0A0", "Challengers.jpg",             0],
+      ["CRITS",                   "CRI",    "#DE1F41", "CRITS.jpg",                   0],
+      ["Doctor Who",              "WHO",    "#01A0E2", "Doctor-Who.jpg",              0],
+      ["Film x Creative Writing", "FLMCRW", "#56FD06", "Film-x-Creative-Writing.jpg", 0],
+      ["Gaming",                  "GAM",    "#F70089", "Gaming.jpg",                  0],
+      ["Sci-Fan",                 "SCF",    "#0265CD", "Scifi-Fantasy.jpg",           0]
     ],
     "completed-events": 1,
     "total-events": 1,
